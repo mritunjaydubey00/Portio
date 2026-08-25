@@ -10,23 +10,40 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <style>
+      :root {
+        --avatar-size: clamp(4rem, 18vw, 6.25rem);
+        --card-width: min(100%, 18rem);
+        --card-min-height: clamp(11rem, 32vw, 12rem);
+      }
+
+      .profile-avatar {
+        width: var(--avatar-size);
+        height: var(--avatar-size);
+      }
+
+      .project-card {
+        width: var(--card-width);
+        min-height: var(--card-min-height);
+      }
+    </style>
   </head>
   <body class="bg-black text-light">
-    <header id="Hero" class="bg-body text-dark px-3 row align-items-start">
-      <div class="col-6">
-        <h1 class="text-start">Mritunjay Dubey</h1>
-        <p px-2>Web Developer | Software Engineer | Open Source Contributor</p>
-      </div>
+    <header id="Hero" class="bg-body text-dark px-3 mx-0 row align-items-start">
       <div
-        class="mx-3 my-1 px-2 col-5 d-flex justify-content-end align-items-center"
+        class="my-1 px-2 col-12 col-md-5 d-flex justify-content-center justify-content-md-end align-items-center"
       >
         <img
-          src="https://avatars.githubusercontent.com/u/110187168?v=4"
+          src="https://avatars.githubusercontent.com/u/127671339?v=4"
           alt="Mritunjay Dubey"
-          class="rounded-circle"
-          width="100"
-          height="100"
+          class="rounded-circle profile-avatar"
         />
+      </div>
+      <div class="col-12 col-md-6">
+        <h1 class="text-start">Mritunjay Dubey</h1>
+        <p class="px-2">
+          Web Developer | Software Engineer | Open Source Contributor
+        </p>
       </div>
     </header>
     <main>
@@ -42,7 +59,61 @@
       <section id="projects">
         <div class="text-light px-3 py-1">
           <h3>Projects</h3>
-          <div></div>
+          <div class="container text-center">
+            <div class="row">
+              <div class="col m-1">
+                <div class="card mx-auto my-3 project-card">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      Railway Platform Management System
+                    </h5>
+                    <p class="card-text">
+                      A web application that allocates platforms to trains
+                    </p>
+                    <a
+                      href="https://github.com/mritunjaydubey00/Railway-Platform-Management-System/releases/tag/V-1"
+                      class="btn btn-primary"
+                      target="_blank"
+                      >Open</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col m-1">
+                <div class="card mx-auto my-3 project-card">
+                  <div class="card-body">
+                    <h5 class="card-title">DevEstrella</h5>
+                    <p class="card-text">Smart Check-out System (mvp)</p>
+                    <a
+                      href="https://github.com/mritunjaydubey00/DevEstrella/releases/tag/1.0.2"
+                      class="btn btn-primary"
+                      target="_blank"
+                      >Open</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="Education">
+        <div class="bg-white text-dark px-3 py-1">
+          <h1>Education and Experience</h1>
+          <div style="height: 20rem; width: 100%;; font-family: 'Times New Roman', Times, serif;">
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item"><b>Year</b></li>
+              <li class="list-group-item"><b>Class</b></li>
+              <li class="list-group-item"><b>Marks  </b></li>
+            </ul>
+            <ul class="list-group list-group-horizontal">
+              <li class="list-group-item">2022</li>
+              <li class="list-group-item">10th</li>
+              <li class="list-group-item">88.2%</li>
+            </ul>
+          </div>
+
+          </div>
         </div>
       </section>
     </main>
